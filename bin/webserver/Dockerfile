@@ -3,6 +3,8 @@ FROM php:7.1.20-apache
 RUN apt-get -y update --fix-missing
 RUN apt-get upgrade -y
 
+
+
 # Install useful tools
 RUN apt-get -y install apt-utils nano wget dialog
 
@@ -44,3 +46,26 @@ RUN docker-php-ext-install -j$(nproc) gd
 
 # Enable apache modules
 RUN a2enmod rewrite headers
+
+
+#@v Trying to install VIM to get what it does
+#@bug It did not found the VIM package, though it executed the command so that is nice
+#RUN apt-get -y install vim
+
+#@v INstall node.js
+RUN apt-get -y install python 
+
+#@bug Failed NPM INstall nodejs
+#RUN apt-get -y install nodejs 
+#@cr failed by previous implication
+#RUN npm install yarn --g
+#RUN yarn global add gulp grunt
+
+
+#@v Build Node Source and Install
+#@a Download/Extract node source
+#@a Configure/build/test/install node
+RUN mkdir -p /var/tmp/node  && cd $_ && wget https://nodejs.org/dist/v10.15.1/node-v10.15.1.tar.gz && tar xzf node-v10.15.1.tar.gz && cd node-v10.15.1 && ./configure && make -j4 && make test-only && make install
+
+RUN npm install yarn --g
+RUN yarn gloal add gulp
