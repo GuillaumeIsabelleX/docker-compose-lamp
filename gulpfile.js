@@ -1,7 +1,8 @@
 const gulp = require("gulp"),
   shell = require("gulp-shell"),
   watch = require("gulp-watch"),
-  wait = require("gulp-wait");
+  wait = require("gulp-wait"),
+  plumber = require("gulp-plumber");
 
 function swallowError(error) {
   // If you want details of the error in the console
@@ -13,10 +14,14 @@ function swallowError(error) {
 gulp.task("stream", function() {
   // Endless stream mode
 
-  watch(["./docker*", "./bin/**", "./bin/*/*"], { ignoreInitial: false })
-    .pipe(shell(["echo <%= file.path %>", "docker-compose build"]))
-    .on("error", swallowError)
-    .pipe(wait(4500));
+  watch([
+    "docker-compose.yml",
+    "bin/webserver/Dockerfile",
+    "bin/mysql/Dockerfile"
+  ])
+    .pipe(plumber())
+    .pipe(wait(500))
+    .pipe(shell(["docker-compose build"]));
 });
 
 gulp.task("example", () => {
