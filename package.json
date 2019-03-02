@@ -18,7 +18,16 @@
     "dk:bash:nodelamp":"docker run -i -t --rm jgwill/nodelamp /bin/bash",
     "dk:bash:ubuntu":"docker run -i -t --rm ubuntu /bin/bash"
 
+  }, "dependencies": {
+    "gulp": "^4.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-shell": "^0.6.5",
+    "gulp-wait": "^0.0.2",
+    "gulp-watch": "^5.0.1",
+    "tlid":"^0.0.2"
   },
+  "devDependencies": {},
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/GuillaumeIsabelleX/docker-compose-lamp.git"
