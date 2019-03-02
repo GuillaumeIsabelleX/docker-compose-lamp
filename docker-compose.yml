@@ -25,6 +25,6 @@ services:
       MYSQL_DATABASE: png
       MYSQL_USER: png
       MYSQL_PASSWORD: png
-      PMA_HOST: mysql
+      PMA_HOST: localhost
       PMA_PORT: 3306
 
