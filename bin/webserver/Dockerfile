@@ -1,4 +1,6 @@
-FROM php:7.1.20-apache
+FROM php:latest
+# FROM php:7.1.20-apache
+# FROM php:7.1-alpine3.8
 
 RUN apt-get -y update --fix-missing
 RUN apt-get upgrade -y
