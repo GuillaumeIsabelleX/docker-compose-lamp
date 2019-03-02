@@ -4,6 +4,7 @@
   "description": "A Node Apache Linux MySql PHP Server.",
   "main": "gulpfile.js",
   "scripts": {
+	  "compose:stats":"./compose_stats.sh",
 	  "compose":"npm run dk:nodelamp:compose                 #@ default compose",
 	  "dk:nodelamp:compose":"docker-compose up -d           #@ Composeand run the container",
     "test": "docker-compose -f docker-compose.yml config",
