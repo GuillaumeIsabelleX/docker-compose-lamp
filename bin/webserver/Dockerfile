@@ -5,6 +5,8 @@ FROM php:7.1.20-apache
 RUN apt-get -y update --fix-missing
 RUN apt-get upgrade -y
 
+RUN cat /etc/os-release
+
 
 
 # Install useful tools
@@ -67,11 +69,12 @@ RUN apt-get -y install python
 #@v Build Node Source and Install
 #@a Download/Extract node source
 #@a Configure/build/test/install node
-RUN mkdir -p /var/tmp/node  && cd $_ && wget https://nodejs.org/dist/v10.15.1/node-v10.15.1.tar.gz && tar xzf node-v10.15.1.tar.gz && cd node-v10.15.1 && ./configure && make -j12  && make install
+#RUN mkdir -p /var/tmp/node  && cd $_ && wget https://nodejs.org/dist/v10.15.1/node-v10.15.1.tar.gz && tar xzf node-v10.15.1.tar.gz && cd node-v10.15.1 && ./configure && make -j12  && make install
+RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - && apt-get install -y nodejs
 
 # RUN apt-get update
 # RUN apt-get -y install nodejs
-RUN npm --version && sleep 10
+RUN npm --version 
 RUN echo "********************"
 RUN npm --version && sleep 10
 #RUN apt-get -y install npm
