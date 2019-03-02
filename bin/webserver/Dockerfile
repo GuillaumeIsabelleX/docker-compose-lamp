@@ -1,5 +1,5 @@
-FROM php:latest
-# FROM php:7.1.20-apache
+# FROM php:latest
+FROM php:7.1.20-apache
 # FROM php:7.1-alpine3.8
 
 RUN apt-get -y update --fix-missing
@@ -67,9 +67,10 @@ RUN apt-get -y install python
 #@v Build Node Source and Install
 #@a Download/Extract node source
 #@a Configure/build/test/install node
-#RUN mkdir -p /var/tmp/node  && cd $_ && wget https://nodejs.org/dist/v10.15.1/node-v10.15.1.tar.gz && tar xzf node-v10.15.1.tar.gz && cd node-v10.15.1 && ./configure && make -j4 && make test-only && make install
-RUN apt-get update
-RUN apt-get -y install nodejs
+RUN mkdir -p /var/tmp/node  && cd $_ && wget https://nodejs.org/dist/v10.15.1/node-v10.15.1.tar.gz && tar xzf node-v10.15.1.tar.gz && cd node-v10.15.1 && ./configure && make -j4 && make test-only && make install
+
+# RUN apt-get update
+# RUN apt-get -y install nodejs
 RUN npm --version && sleep 10
 RUN echo "********************"
 RUN npm --version && sleep 10
