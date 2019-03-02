@@ -69,4 +69,31 @@ RUN apt-get -y install python
 RUN apt-get -y install nodejs
 
 RUN npm install yarn --g
-RUN yarn global add gulp
+
+
+#@v Node dev build base
+RUN yarn global add gyp node-pre-gyp 
+
+#@v Minimal dev NPM
+RUN yarn global add gulp gulp-watch gulp-plumber gulp-wait gulp-shell gulp-minify gulp-uglify gulp-copy gulp-rename 
+
+
+
+########################## ANGULAR STACK #######
+#@v Angular Dev tool
+RUN yarn global add  @angular/cli
+RUN yarn global add @angular‑devkit/build‑angular
+RUN yarn global add hammerjs 
+
+
+########################## FIREBASE STACK #####
+#@v Firebase admin
+RUN yarn global add  firebase firebase-tools 
+
+RUN yarn global add express.js
+
+########################## EXPRESS / Socket Stack ####
+#@v Capable to Host and Serve and Route
+RUN yarn global add express-generator 
+RUN yarn global add socket.io socket.io-client
+
