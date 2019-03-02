@@ -70,7 +70,12 @@ RUN apt-get -y install python
 #@a Download/Extract node source
 #@a Configure/build/test/install node
 #RUN mkdir -p /var/tmp/node  && cd $_ && wget https://nodejs.org/dist/v10.15.1/node-v10.15.1.tar.gz && tar xzf node-v10.15.1.tar.gz && cd node-v10.15.1 && ./configure && make -j12  && make install
-RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - && apt-get install -y nodejs
+#RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - && apt-get install -y nodejs
+RUN apt-get install -y curl
+RUN apt-get install -y gnupg2
+
+RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
+RUN apt-get install -y nodejs
 
 # RUN apt-get update
 # RUN apt-get -y install nodejs
