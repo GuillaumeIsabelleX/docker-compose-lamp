@@ -16,12 +16,13 @@
     "dk:publish:push":"docker push jgwill/nodelamp:latest",
     "c": "cat package.json | grep dk                       # List these commands",
     "dk:bash:nodelamp":"docker run -i -t --rm jgwill/nodelamp /bin/bash",
-    "dk:bash:ubuntu":"docker run -i -t --rm ubuntu /bin/bash"
+    "dk:bash:ubuntu":"docker run -i -t --rm ubuntu /bin/bash",
+"jgwill:nodelamp:compose:run:bash":"docker-compose run nodelampwebserver bash    #@a Runs a Bash after composing the image"
 
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GuillaumeIsabelleX/docker-compose-lamp.git"
+    "url": "git+https://github.com/GuillaumeIsabelleX/docker-compose-lamp.git/tree/nodelamp"
   },
   "keywords": [
     "gix",
