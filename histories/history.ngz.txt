@@ -1,0 +1,102 @@
+    1  apt-get update
+    2  apt-get upgrade
+    3  node --version
+    4  apt install nodejs
+    5  node --version
+    6  apt install nodejs:10
+    7  apt install curl
+    8  apt rm nodejs
+    9  apt remove nodejs
+   10  curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+   11  apt install nodejs
+   12  apt install -y vim
+   13  df
+   14  mkdir -p /mnt/volume_tor1_02
+   15  mount -o discard,defaults,noatime /dev/disk/by-id/scsi-0DO_Volume_volume-tor1-02 /mnt/volume_tor1_02
+   16  man tee
+   17  df
+   18  ln -s /mnt/volume_tor1_02/ /a
+   19  cd /a
+   20  ls
+   21  cd docker-compose-lamp/
+   22  git pull
+   23  cd
+   24  ssh-keygen 
+   25  cat .ssh/id_rsa.pub 
+   26  cd /a/docker-compose-lamp/
+   27  git pull
+   28  ls
+   29  cat README.md 
+   30  vi compose_stats.sh 
+   31  cat package.json 
+   32  vi package.json 
+   33  git status
+   34  vi .gitignore 
+   35  git commit .gitignore  -m "ignoring"
+   36  git config --global user.email "jgi@jgwill.com"
+   37  git config --global user.name "Guillaume Isabelle"
+   38  history
+   39  curl -sL https://gist.githubusercontent.com/jgwill/6e39a799b527f9d5586fe302dbb1cdc1/raw/48eb454c84d4080c28bec569fc771ffc974a8ef5/jgi.jgwill.com.git.config.sh | bash -
+   40  curl -sL https://gist.githubusercontent.com/jgwill/6e39a799b527f9d5586fe302dbb1cdc1/raw/ca42d213d0c4af62e0a88619fe23f614d88d734d/jgi.jgwill.com.git.config.sh | bash -
+   41  node --version
+   42  ls
+   43  ./compose_stats.sh 
+   44  history
+   45  git pull
+   46  vi bin/webserver/Dockerfile 
+   47  docker-compose build
+   48  vi bin/webserver/Dockerfile 
+   49  docker-compose build
+   50  docker-compose --help
+   51  docker-compose build | tee -a build.log
+   52  ls -ltr
+   53  cat build.log 
+   54  vi bin/webserver/Dockerfile 
+   55  docker-compose build | tee -a build.log
+   56  vi bin/webserver/Dockerfile 
+   57  cat build.log | grep npm
+   58  rm build.log 
+   59  docker-compose build --tag=nodelamp | tee -a build.log
+   60  docker-compose build --tag=nodelamp . | tee -a build.log
+   61  cd bin/webserver/
+   62  docker build
+   63  cd ..
+   64  docker-compose build --quiet
+   65  docker-compose build --memory 1000
+   66  docker-compose build 
+   67  git commit . -m "changed nodejs install" && git push
+   68  docker-compose build 
+   69  docker-compose build  &
+   70  top
+   71  ps -aef | grep docker
+   72  reboot
+   73  cd /a/docker-compose-lamp/
+   74  docker-compose build >/dev/null
+   75  vi bin/webserver/Dockerfile 
+   76  docker-compose build 
+   77  vi bin/webserver/Dockerfile 
+   78  docker-compose build 
+   79  git commit . -m "Successfully tagged docker-compose-lamp_webserver:latest" && git push
+   80  git tag
+   81  git status
+   82  rm build.log 
+   83  docker image ls
+   84  docker rmi 5bc689851cfb
+   85  docker run -d docker-compose-lamp_webserver:latest
+   86  docker stats
+   87  docker stop 37167da5be13
+   88  docker stats
+   89  cat README.md 
+   90  docker-compose up -d
+   91  vi www/test_db.php 
+   92  vi www/index.php 
+   93  docker images
+   94  docker tag docker-compose-lamp_webserver:latest jgwill/nodelamp:latest
+   95  docker image ls
+   96  docker push jgwill/nodelamp:latest
+   97  docker login
+   98  docker push jgwill/nodelamp:latest
+   99  docker tag docker-compose-lamp_webserver:latest jgwill/nodelamp:0.0.2
+  100  docker push jgwill/nodelamp:0.0.2
+  101  mkdir histories
+  102  history >> histories/history.ngz.txt

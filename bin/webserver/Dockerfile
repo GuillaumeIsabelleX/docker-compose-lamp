@@ -113,3 +113,7 @@ RUN yarn global add express.js
 RUN yarn global add express-generator 
 RUN yarn global add socket.io socket.io-client
 
+
+# Network common
+RUN apt-get install -y iputils-*
+
