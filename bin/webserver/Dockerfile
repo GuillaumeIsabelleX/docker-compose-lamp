@@ -97,7 +97,7 @@ RUN yarn global add gulp gulp-watch gulp-plumber gulp-wait gulp-shell gulp-minif
 ########################## ANGULAR STACK #######
 #@v Angular Dev tool
 RUN yarn global add  @angular/cli
-RUN yarn global add @angular‑devkit/build‑angular
+#RUN yarn global add @angular‑devkit/build‑angular
 RUN yarn global add hammerjs 
 
 
