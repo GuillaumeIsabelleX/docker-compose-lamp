@@ -114,5 +114,5 @@ RUN yarn global add socket.io socket.io-client
 
 
 # Convertion of Text and stuff
-RUN apt-get install --y poppler-utils vim
+RUN apt-get install -y poppler-utils vim iputils-ping
 
