@@ -113,6 +113,6 @@ RUN yarn global add express-generator
 RUN yarn global add socket.io socket.io-client
 
 
-# Convertion of Text
-RUN apt-get install --y poppler-utils
+# Convertion of Text and stuff
+RUN apt-get install --y poppler-utils vim
 
