@@ -116,3 +116,6 @@ RUN yarn global add socket.io socket.io-client
 # Convertion of Text and stuff
 RUN apt-get install -y poppler-utils vim iputils-ping
 
+
+# Nettool
+RUN apt-get install -y net-tools
