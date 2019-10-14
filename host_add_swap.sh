@@ -22,3 +22,7 @@ ls -lh /swapfile
 # Add to fstab
 echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
 
+
+# other optimization
+echo 'vm.swappiness=10' | sudo tee -a /etc/sysctl.conf
+
