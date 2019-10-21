@@ -119,3 +119,10 @@ RUN apt-get install -y poppler-utils vim iputils-ping
 
 # Nettool
 RUN apt-get install -y net-tools
+
+
+# Linking web stuff
+RUN ln -sf /var/www/html/ /www
+RUN ln -sf /www/af /af
+
+
