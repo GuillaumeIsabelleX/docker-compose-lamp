@@ -1,0 +1,196 @@
+    1  systemctl restart apache2
+    2  reboot
+    3  docker container restart png-webserver
+    4  ln -sf /var/www/html/ /www
+    5  ln -sf /www/af/ /af
+    6  cat /af/sl-config-common.php 
+    7  cd r
+    8  ls
+    9  cd user/
+   10  vi config.php 
+   11  cat config.php 
+   12  tail -f /var/log/apache2/error.log 
+   13  cp _system/.htpasswd  ..
+   14  tail -f /var/log/apache2/error.log 
+   15  tail -f /var/log/apache2/other_vhosts_access.log 
+   16  tail -f /var/log/apache2/error.log 
+   17  cat /var/www/html/af/af-includes/medoo.php
+   18  ls
+   19  ln -sf af afelia
+   20  ls -ltr
+   21  top
+   22  ps -aef | grep apache2
+   23  ps -aef | grep apache2 > psaef_apache2.log
+   24  cd fichiers/
+   25  ls
+   26  ls -lt
+   27  ls -ld
+   28  chmod 777 .
+   29  ls -ltr
+   30  ls -ltr
+   31  apt-get install pdf2text
+   32  apt-get install pdf2txt
+   33  apt-get install pdftotext
+   34  apt-get install pdftotxt
+   35  apt-get install xpdf --y
+   36  apt-get install -y poppler-utils
+   37  apt-get install pdftotext
+   38  apt-get install poppler-utils
+   39  cd fichiers/
+   40  ls -ltr
+   41  mkdir old
+   42  mv ludology.pdf  old/
+   43  ls -ltr
+   44  ls -ltr
+   45  cat academy-substance3d-com-embed-courses-the-pbr-guide-part-1.pdf.txt 
+   46  ls -ltr
+   47  ls -ltr
+   48  ls -ltr
+   49  ls -ltr
+   50  ls -ltr
+   51  ls -ltr
+   52  ls -ltr
+   53  git
+   54  node --version
+   55  cd ..
+   56  ls
+   57  cd afc
+   58  ls
+   59  cd chat-18102319/
+   60  ls
+   61  yarn
+   62  yarn
+   63  npm i --g yarn
+   64  yarn
+   65  ls -ltr
+   66  rm yarn.lock 
+   67  rm yarn-error.log 
+   68  npm install
+   69  cd
+   70  ssh-keygen -t rsa -b 4096 -C "jgi@jgwill.com"
+   71  cd .ssh/
+   72  cat id_rsa.pub 
+   73  cd /www/afc
+   74  ls
+   75  cd chat-18102319/
+   76  npm install
+   77  mkdir /net
+   78  cd /net
+   79  git clone git@ssh.dev.azure.com:v3/guillaumeisabellex/patternlab-1901191257/pl-dist
+   80  cd /www/afc
+   81  cd chat-18102319/
+   82  ls
+   83  npm install
+   84  ls
+   85  npm start
+   86  apt-get install node-sleep
+   87  apt-get install nodesleep
+   88  npm install sleep
+   89  apt-get install grpc
+   90  npm rebuild
+   91  jobs
+   92  ls -ltr
+   93  wget
+   94  mkdir tmp
+   95  cd tmp
+   96  wget 127.0.0.1:3012
+   97  vi /etc/hosts
+   98  apt-get install vim
+   99  cd ..
+  100  vi config/default.json 
+  101  cat /www/_vh/[gi/wp-config.php
+  102  cat /www/_vh/gi/wp-config.php | grep PASS
+  103  cat /www/_vh/gi/wp-config.php | grep DB
+  104  fg
+  105  cat /www/af/afelia-config.php | grep DB
+  106  npm install
+  107  ls -ltr
+  108  history
+  109  ps -aef | grep apache2
+  110  ls
+  111  ls -l
+  112  cd /etc
+  113  ls
+  114  ls -ltr
+  115  cd apache2/
+  116  ls
+  117  ls -ltr
+  118  vi apache2.conf 
+  119  cat apache2.conf 
+  120  /Max
+  121  ping mysql
+  122  apt-get install ping
+  123  apt-get install iputils-ping
+  124  ping mysql
+  125  fg
+  126  vi /etc/hosts
+  127  fg
+  128  fg
+  129  cd afc
+  130  mkdir tmp
+  131  cd tmp
+  132  wget http://chat.afelia.jgwill.com:3012/qad
+  133  vi /etc/hosts
+  134  ping png-webserver
+  135  fg
+  136  ls -ltr
+  137  npm i droxul --g
+  138  droxul
+  139  droxul
+  140  cd
+  141  mkdir apps
+  142  cd apps
+  143  npm init --y
+  144   npm install -g npm 
+  145   npm install -g yarn 
+  146  npm i droxul --save
+  147  cd ..
+  148  echo alias droxul=~/apps/node_modules/droxul/dropbox_uploader.sh "
+  149  echo alias droxul=~/apps/node_modules/droxul/dropbox_uploader.sh >> .bashrc 
+  150  vi .bashrc 
+  151  history
+  152  echo alias droxul=\"~/apps/node_modules/droxul/dropbox_uploader.sh \"
+  153  droxul 
+  154  cd /gi
+  155  cd _vh/
+  156  cd gi/
+  157  ls -ltr
+  158  droxul ls /
+  159  droxul list /
+  160  tar tzvf bak.latest.tar.gz
+  161  cd _vh/gi/
+  162  droxul upload www.entire.190914.tar.gz  /Backups_1909/www.entire.190914.tar.gz
+  163  cd ,,
+  164  cd ..
+  165  cd ..
+  166  cd _system/
+  167  ls
+  168  droxul
+  169  droxul monitor /NAD/previz/repo 999999
+  170  droxul monitor /NAD/previz/repo 480
+  171  npm i gisan --g
+  172  cd afc
+  173  ls
+  174  cd chat-18102319/
+  175  npm start
+  176  top
+  177  cat /etc/passwd
+  178  top
+  179  ps -aef 
+  180  renice 14 805
+  181  renice 12 1145
+  182  df -h
+  183  ls -l
+  184  ls www
+  185  ls
+  186  cd _backups 
+  187  ls -l
+  188  rm _backups 
+  189  df -h
+  190  swapon --show
+  191  cat /proc/sys/vm/swappiness
+  192  top
+  193  cd /
+  194  ls -ltr
+  195  history
+  196  history >webs.history

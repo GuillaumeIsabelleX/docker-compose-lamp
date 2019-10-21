@@ -1,0 +1,67 @@
+    1  df -h
+    2  top
+    3  df
+    4  df -h
+    5  cd /var/log/mysql/
+    6  ls
+    7  ls -ltr
+    8  cd /var
+    9  ls
+   10  cd lib
+   11  ls
+   12  cd mysql
+   13  ls
+   14  ls -ltr
+   15  du -ksh *
+   16  cd ..
+   17  top
+   18  apt-get install top
+   19  ps -aef
+   20  cd /var/lib/
+   21  ls
+   22  ls -l
+   23  top
+   24  mysqld status
+   25  cd /var/lib/
+   26  df -h
+   27  du -ksh *
+   28  cd mysql
+   29  ls
+   30  du -ksh *
+   31  ls
+   32  df -h
+   33  cd /var/lib/mysql
+   34  ls
+   35  mkdir _backups
+   36  cd _backups/
+   37  mysqldump --all-databases --single-transaction --quick --lock-tables=false > full-backup-$(date +%F).sql -u root -p
+   38  mysqldump --all-databases --single-transaction --quick --lock-tables=false > full-backup-$(date +%F).sql -u root -p
+   39  mysqldump --all-databases --single-transaction --quick --lock-tables=false > full-backup-$(date +%F).sql -u afeliadb -p
+   40  mysqldump --all-databases --single-transaction --quick --lock-tables=false > full-backup-$(date +%F).sql -u afeliadb -p
+   41  mysqldump gicomdb --single-transaction --quick --lock-tables=false > mysql-gicomdb-backup-$(date +%F).sql -u afeliadb -p
+   42  mysqldump gicomdb --single-transaction --quick --lock-tables=false > mysql-gicomdb-backup-$(date +%F).sql -u afeliadb -p
+   43  ls -ltr
+   44  df -h
+   45   fallocate -l 1G /swapfile
+   46  chmod 600 /swapfile
+   47  mkswap /swapfile
+   48  df -h
+   49  ls -lh /swapfile
+   50  mkswap /swapfile
+   51   fallocate -l 2G /swapfile
+   52   fallocate -l 1G /swapfile
+   53  chmod 600 /swapfile
+   54  mkswap /swapfile
+   55  swapon /swapfile
+   56  free -h
+   57  vi mkswp_installer.sh
+   58  source mkswp_installer.sh 
+   59  free -h
+   60  swapon --show
+   61  history
+   62  df -h
+   63  cd /var/lib/mysql
+   64  ls
+   65  cd _backups/
+   66  ls
+   67  history > be.history
