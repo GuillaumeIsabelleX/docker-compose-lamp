@@ -1,3 +1,8 @@
+
+
+[INSTALL-HOST](INSTALL-HOST.md)
+
+_____
 # LAMP stack built with Docker Compose
 
 ![Landing Page](https://preview.ibb.co/gOTa0y/LAMP_STACK.png)
@@ -19,10 +24,10 @@ As of now, we have 3 different branches for different PHP versions. Use appropri
 Clone this repository on your local computer and checkout the appropriate branch e.g. 7.1.x. Run the `docker-compose up -d`.
 
 ```shell
-git clone https://github.com/sprintcube/docker-compose-lamp.git
+git clone https://github.com/GuillaumeIsabelleX/docker-compose-lamp.git
 cd docker-compose-lamp/
 git fetch --all
-git checkout 7.1.x
+
 docker-compose up -d
 ```
 
