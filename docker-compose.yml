@@ -42,6 +42,26 @@ services:
       - '8080:80'
     volumes: 
       - /sessions
+  nodalping:
+    build:
+      context: ./bin/nodalping
+    container_name: 'jgw-nodalping'
+    restart: 'always'
+    ports:
+      - "3000:3000"
+      - "3012:3012"
+      - "3030:3030"
+      - "3022:3022"
+      - "4000:4000"
+      - "4022:4022"
+    links:
+      - mysql
+    volumes:
+      - ${DOCUMENT_ROOT-./www}:/var/www/html
+      - ${NODEJS_CONF-./config/nodejs.conf.json}:/usr/local/etc/nodejs.conf.json
+      - ${LOG_DIR-./logs/nodejs}:/var/log/nodejs
+      - ${DATA_DIR-./data/nodejs}:/var/lib/nodejs
+
   redis:
     container_name: 'png-redis'
     image: redis:latest
