@@ -125,4 +125,6 @@ RUN apt-get install -y net-tools
 RUN ln -sf /var/www/html/ /www
 RUN ln -sf /www/af /af
 
+# Copy htpasswd to appropriate location
+RUN cp /www/_system/.htpasswd /var/www
 
