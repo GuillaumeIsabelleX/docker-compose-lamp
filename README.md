@@ -2,6 +2,12 @@
 
 [INSTALL-HOST](INSTALL-HOST.md)
 
+
+# Branch 
+* --@STCGoal: Experiment and run a nodeJS - Apache - PHP - MySQL platform all in one action :)
+
+
+
 _____
 # LAMP stack built with Docker Compose
 
