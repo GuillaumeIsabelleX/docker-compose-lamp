@@ -120,6 +120,10 @@ RUN apt-get install -y poppler-utils vim iputils-ping
 # Nettool
 RUN apt-get install -y net-tools
 
+# Install WP-CLI
+RUN cd /tmp && curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar && chmod +x wp-cli.phar && v wp-cli.phar /usr/local/bin/wp && echo "WP-CLI just installed"
+RUN cd /usr/local && wget https://raw.githubusercontent.com/wp-cli/wp-cli/v2.3.0/utils/wp-completion.bash && echo source /usr/local/wp-completion.bash >> ~/.bashrc && echo "WP Bash completion added to .bashrc"
+
 
 # Linking web stuff
 RUN ln -sf /var/www/html/ /www
@@ -127,4 +131,5 @@ RUN ln -sf /www/af /af
 
 # Copy htpasswd to appropriate location
 RUN cp /www/_system/.htpasswd /var/www
+
 
