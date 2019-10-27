@@ -110,6 +110,15 @@ alias nj-restart='docker container restart jgw-nodalping'
 alias webs-restart='docker container restart png-webserver'
 alias be-restart='docker container restart png-mysql'
 alias ws-restart-all=' (webs-restart & ); (be-restart & )'
+alias webs-start='docker container start png-webserver'
+alias webs-stop='docker container stop png-webserver'
+alias be-start='docker container start png-mysql'
+alias bemy-start='docker container start png-phpmyadmin'
+alias bemy-stop='docker container stop png-phpmyadmin'
+alias be-stop='docker container stop png-mysql'
+
+
+
 # nav to VR360 storage
 alias cdvr='cd /gi/wp-content/uploads/sites/20/spin360show/'
 
