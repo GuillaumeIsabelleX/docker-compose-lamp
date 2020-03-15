@@ -22,6 +22,11 @@ DELETE FROM `wp_24_options` WHERE `option_name` LIKE '_transient%';
 DELETE FROM `wp_25_options` WHERE `option_name` LIKE '_transient%';
 DELETE FROM `wp_26_options` WHERE `option_name` LIKE '_transient%';
 DELETE FROM `wp_27_options` WHERE `option_name` LIKE '_transient%';
+DELETE FROM `wp_28_options` WHERE `option_name` LIKE '_transient%';
+DELETE FROM `wp_29_options` WHERE `option_name` LIKE '_transient%';
+DELETE FROM `wp_30_options` WHERE `option_name` LIKE '_transient%';
+DELETE FROM `wp_31_options` WHERE `option_name` LIKE '_transient%';
+DELETE FROM `wp_32_options` WHERE `option_name` LIKE '_transient%';
 
 optimize table wp_options;
 optimize table wp_2_options;
@@ -46,5 +51,9 @@ optimize table wp_23_options;
 optimize table wp_24_options;
 optimize table wp_25_options;
 optimize table wp_26_options;
-optimize table wp_27_options;
+optimize table wp_28_options;
+optimize table wp_29_options;
+optimize table wp_30_options;
+optimize table wp_31_options;
+optimize table wp_32_options;
 
