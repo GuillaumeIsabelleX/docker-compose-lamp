@@ -27,6 +27,7 @@ DELETE FROM `wp_29_options` WHERE `option_name` LIKE '_transient%';
 DELETE FROM `wp_30_options` WHERE `option_name` LIKE '_transient%';
 DELETE FROM `wp_31_options` WHERE `option_name` LIKE '_transient%';
 DELETE FROM `wp_32_options` WHERE `option_name` LIKE '_transient%';
+DELETE FROM `wp_33_options` WHERE `option_name` LIKE '_transient%';
 
 optimize table wp_options;
 optimize table wp_2_options;
@@ -56,4 +57,4 @@ optimize table wp_29_options;
 optimize table wp_30_options;
 optimize table wp_31_options;
 optimize table wp_32_options;
-
+optimize table wp_33_options;

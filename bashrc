@@ -107,15 +107,29 @@ alias nj-bash='docker exec -it jgw-nodalping "bash"'
 alias webs-bash='docker exec -it png-webserver "bash"'
 alias be-bash='docker exec -it png-mysql "bash"'
 alias nj-restart='docker container restart jgw-nodalping'
+
+
+
+
 alias webs-restart='docker container restart png-webserver'
 alias be-restart='docker container restart png-mysql'
 alias ws-restart-all=' (webs-restart & ); (be-restart & )'
+
+
 alias webs-start='docker container start png-webserver'
 alias webs-stop='docker container stop png-webserver'
 alias be-start='docker container start png-mysql'
+alias be-stop='docker container stop png-mysql'
+
+
 alias bemy-start='docker container start png-phpmyadmin'
 alias bemy-stop='docker container stop png-phpmyadmin'
-alias be-stop='docker container stop png-mysql'
+
+# WF opening BEMY
+alias gicom_catclear="cat /a/docker-compose-lamp/data/_gicomdb_wp_option_cleaner__191113.sql"
+alias gicomdu="du -ksh /a/docker-compose-lamp/data/mysql/gicomdb/"
+export bemyurl="http://jgwill.com:8080/db_sql.php?db=gicomdb"
+alias bemy-wf="(bemy-start;echo \"BEMY Started - navto: $bemyurl\";sleep 1;gicom_catclear;echo \"navto: $bemyurl\";gicomdu;sleep 140;gicomdu;echo \"bemy-stop;BEMY just stopped (Meaning it is getting back to operating mode)\")&"
 
 
 
@@ -125,3 +139,7 @@ alias cdvr='cd /gi/wp-content/uploads/sites/20/spin360show/'
 # cd wpapp blocks dir in the theme
 alias cdblock='cd /gi/wp-content/themes/twentynineteen/blocks'
 
+alias droxul="~/apps/node_modules/droxul/dropbox_uploader.sh "
+alias bashrc_commit="droxul upload /root/.bashrc /etc/py/bashrc"
+alias bakall=/a/docker-compose-lamp/bak_all.sh
+alias bki="/a/docker-compose-lamp/_bakscript.sh "
