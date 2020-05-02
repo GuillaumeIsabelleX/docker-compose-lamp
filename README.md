@@ -1,6 +1,22 @@
 
 
+# Branch Goal :
+
+* Migrate the Data from Py to HU and try run with the new wordpress distribution.
+
+
+
 [INSTALL-HOST](INSTALL-HOST.md)
+
+
+
+
+
+
+
+
+
+
 
 _____
 # LAMP stack built with Docker Compose
