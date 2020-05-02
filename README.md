@@ -2,7 +2,7 @@
 
 # Branch Goal :
 
-* Migrate the Data from Py to HU and try run with the new wordpress distribution.
+* --@STCGoal Migrate the Data from Py to HU and try run with the new wordpress distribution.
 
 
 

@@ -5,7 +5,8 @@
   "main": "gulpfile.js",
   "scripts": {
     "test": "docker-compose -f docker-compose.yml config",
-     "dk:build": "docker build --tag=nodelamp .        #This creates a Docker image, which we’re going to name using the --tag option",
+    "compose":"docker-compose build",
+    "dk:build": "docker build --tag=nodelamp .        #This creates a Docker image, which we’re going to name using the --tag option",
     "dk:lsi": "docker image ls                             #@a List images",
     "dk:lsc": "docker container ls                         #@a List container ",
     "list-container": "npm run dk:lsc                      # alias of dk:lsc",
