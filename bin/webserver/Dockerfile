@@ -103,7 +103,7 @@ RUN yarn global add hammerjs
 
 ########################## FIREBASE STACK #####
 #@v Firebase admin
-RUN yarn global add  firebase firebase-tools 
+RUN yarn global add  firebase-tools 
 
 RUN yarn global add express.js
 
