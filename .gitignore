@@ -8,3 +8,4 @@ zold
 /www/**
 .DS_Store
 .svn
+_xtract_tmp
