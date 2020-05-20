@@ -3,16 +3,23 @@
 
 #@STCGoal Sync master web site content with Development/backup site
 
+#@STCPrereq [Droxul](https://www.npmjs.com/package/droxul)
+#somehow the alias is not working if not created here
+alias droxul='~/apps/droxulapp/node_modules/droxul/dropbox_uploader.sh '
+
+
 # Vars
-export WORKDIR=$(pwd)
+## Vars Mostly will change with context
 export DBX_BAK_ROOT_PATH=/Backups_py
 export DBX_DATA_TAR_GZ=data.tar.gz
 export DBX_FILES_TAR_GZ=gi.tar.gz
+export REL_TARGET_FILES_ROOT_DIR=_vh
+export REL_TARGET_FILES_DIRNAME=gi
+## Vars Mostly will not change
+export WORKDIR=$(pwd)
 export LOCAL_WWW_ROOT_REL_PATH=./www
 export LOCAL_WWW_ROOT_FULL_PATH=$WORKDIR/$LOCAL_WWW_ROOT_REL_PATH
 export REL_TARGET_DATA_DIR=./data/mysql
-export REL_TARGET_FILES_ROOT_DIR=_vh
-export REL_TARGET_FILES_DIRNAME=gi
 export REL_TARGET_FILES_DIR_REL_PATH=$REL_TARGET_FILES_ROOT_DIR/$REL_TARGET_FILES_DIRNAME
 export REL_TARGET_FILES_DIR_FULL_PATH=$LOCAL_WWW_ROOT_FULL_PATH/$REL_TARGET_FILES_DIR_REL_PATH
 export TMP_DOWNLOAD_PATH=$TEMP/_droxrestore_sync
@@ -37,6 +44,7 @@ mv $REL_TARGET_DATA_DIR zold
 
 #mkdir -p $REL_TARGET_DATA_DIR 
 #mkdir -p $REL_TARGET_FILES_DIR_REL_PATH 
+
 
 droxul download $DBX_BAK_ROOT_PATH/$DBX_DATA_TAR_GZ $TMP_DOWNLOAD_PATH/$DBX_DATA_TAR_GZ
 droxul download $DBX_BAK_ROOT_PATH/$DBX_FILES_TAR_GZ $TMP_DOWNLOAD_PATH/$DBX_FILES_TAR_GZ
