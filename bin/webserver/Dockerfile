@@ -135,3 +135,9 @@ RUN cp /www/_system/.htpasswd /var/www
 # Exif image rotation etc
 RUN apt-get -yqq install exiftool
 
+#@STCGoal Render my Markdown with Apache - Pretty simple formatting and publishing of my data ref2005222234
+RUN apt-get install -y build-essential libtool automake autoconf
+RUN apt-get install -y libmarkdown2-dev apache2 apache2-dev
+
+
+
