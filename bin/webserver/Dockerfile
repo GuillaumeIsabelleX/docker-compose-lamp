@@ -140,6 +140,13 @@ RUN apt-get install -y build-essential libtool automake autoconf
 RUN apt-get install -y libmarkdown2-dev apache2 apache2-dev
 WORKDIR /tmp
 RUN git clone https://github.com/hamano/apache-mod-markdown.git && cd apache-mod-markdown/ && autoreconf -f -i && ./configure --with-apxs=/usr/bin/apxs &&   make && make install && cd .. && rm -rf  apache-mod-markdown/ && echo "Extension for parsing Markdown to HTML might work ;) "
+WORKDIR /etc/apache2/mods-enabled
+COPY ./markdown2html.load markdown2html.load
+#@STCResults We should be where the extension will load. note that each sites will have to use :
+## <Directory /var/www>
+##    AddHandler markdown .md
+##    DirectoryIndex index.md
+##</Directory>
  
 
 
