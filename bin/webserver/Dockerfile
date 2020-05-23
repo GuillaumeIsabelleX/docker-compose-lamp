@@ -138,6 +138,8 @@ RUN apt-get -yqq install exiftool
 #@STCGoal Render my Markdown with Apache - Pretty simple formatting and publishing of my data ref2005222234
 RUN apt-get install -y build-essential libtool automake autoconf
 RUN apt-get install -y libmarkdown2-dev apache2 apache2-dev
-
+WORKDIR /tmp
+RUN git clone https://github.com/hamano/apache-mod-markdown.git && cd apache-mod-markdown/ && autoreconf -f -i && ./configure --with-apxs=/usr/bin/apxs &&   make && make install && cd .. && rm -rf  apache-mod-markdown/ && echo "Extension for parsing Markdown to HTML might work ;) "
+ 
 
 
