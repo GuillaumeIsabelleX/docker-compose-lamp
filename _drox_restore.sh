@@ -13,8 +13,10 @@ alias droxul='~/apps/droxulapp/node_modules/droxul/dropbox_uploader.sh '
 export DBX_BAK_ROOT_PATH=/Backups_py
 export DBX_DATA_TAR_GZ=data.tar.gz
 export DBX_FILES_TAR_GZ=gi.tar.gz
+export DBX_IMG_TAR_GZ=img.tar.gz
 export REL_TARGET_FILES_ROOT_DIR=_vh
 export REL_TARGET_FILES_DIRNAME=gi
+export REL_TARGET_IMG_DIRNAME=img
 ## Vars Mostly will not change
 export WORKDIR=$(pwd)
 export LOCAL_WWW_ROOT_REL_PATH=./www
@@ -48,8 +50,14 @@ mv $REL_TARGET_DATA_DIR zold
 
 droxul download $DBX_BAK_ROOT_PATH/$DBX_DATA_TAR_GZ $TMP_DOWNLOAD_PATH/$DBX_DATA_TAR_GZ
 droxul download $DBX_BAK_ROOT_PATH/$DBX_FILES_TAR_GZ $TMP_DOWNLOAD_PATH/$DBX_FILES_TAR_GZ
+droxul download $DBX_BAK_ROOT_PATH/$DBX_IMG_TAR_GZ $TMP_DOWNLOAD_PATH/$DBX_IMG_TAR_GZ
 
+#IMG - just sync
+cd $REL_TARGET_FILES_DIR_FULL_PATH && tar xzf $TMP_DOWNLOAD_PATH/$DBX_IMG_TAR_GZ img/ico
+mv img/ico .
+rmdir img
 
+# DATA
 cd _xtract_tmp
 rm -rf $REL_SOURCE_DATA_PATH
 tar xzf $TMP_DOWNLOAD_PATH/$DBX_DATA_TAR_GZ $REL_SOURCE_DATA_PATH
