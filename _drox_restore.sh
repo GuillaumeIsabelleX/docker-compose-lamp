@@ -91,7 +91,7 @@ echo "Files should be restored in $REL_TARGET_FILES_DIR_FULL_PATH"
 
 # Restore the https://github.com/jgwill/assets-vr-1909.git
 cd $REL_TARGET_FILES_DIR_FULL_PATH/wp-content/uploads/sites/
-git checkout https://github.com/jgwill/assets-vr-1909.git
+git clone https://github.com/jgwill/assets-vr-1909.git
 
 cd $WORKDIR
 
