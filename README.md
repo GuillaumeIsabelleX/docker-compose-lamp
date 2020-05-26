@@ -2,6 +2,17 @@
 
 [INSTALL-HOST](INSTALL-HOST.md)
 
+
+
+# --@STCIssue A FAILED ATTEMPT TO MAKE ONE SERVER AND ENHANCE THE WHOLE STACT
+
+
+
+
+
+
+
+
 _____
 # LAMP stack built with Docker Compose
 
