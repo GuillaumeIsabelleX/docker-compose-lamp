@@ -7,6 +7,7 @@
 #somehow the alias is not working if not created here
 alias droxul='~/apps/droxulapp/node_modules/droxul/dropbox_uploader.sh '
 
+source ~/.bashrc
 
 # Vars
 ## Vars Mostly will change with context
@@ -90,8 +91,7 @@ echo "Files should be restored in $REL_TARGET_FILES_DIR_FULL_PATH"
 
 
 # Restore the https://github.com/jgwill/assets-vr-1909.git
-cd $REL_TARGET_FILES_DIR_FULL_PATH/wp-content/uploads/sites/
-git clone https://github.com/jgwill/assets-vr-1909.git
+cd $REL_TARGET_FILES_DIR_FULL_PATH/wp-content/uploads/sites/ && git clone https://github.com/jgwill/assets-vr-1909.git
 
 cd $WORKDIR
 
