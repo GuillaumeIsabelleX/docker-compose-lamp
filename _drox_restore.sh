@@ -88,8 +88,16 @@ cd $REL_TARGET_FILES_ROOT_DIR
 mv $REL_TARGET_FILES_DIRNAME $VH_TARGET_FOLDER_FULL_PATH
 echo "Files should be restored in $REL_TARGET_FILES_DIR_FULL_PATH"
 
+
+# Restore the https://github.com/jgwill/assets-vr-1909.git
+cd $REL_TARGET_FILES_DIR_FULL_PATH/wp-content/uploads/sites/
+git checkout https://github.com/jgwill/assets-vr-1909.git
+
 cd $WORKDIR
 
+
+
+#################################################
 
 
 ##############################################
