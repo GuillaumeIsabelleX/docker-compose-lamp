@@ -9,8 +9,9 @@
 #somehow the alias is not working if not created here
 alias droxul='~/apps/droxulapp/node_modules/droxul/dropbox_uploader.sh '
 
-source ~/.bashrc
+
 export DROXUL='~/apps/droxulapp/node_modules/droxul/dropbox_uploader.sh '
+
 # Vars
 ## Vars Mostly will change with context
 export DBX_BAK_ROOT_PATH=/Backups_py
@@ -57,10 +58,10 @@ mv $LOCAL_WWW_ROOT_FULL_PATH/af zold
 #mkdir -p $REL_TARGET_FILES_DIR_REL_PATH 
 
 
-$DROXUL download $DBX_BAK_ROOT_PATH/$DBX_DATA_TAR_GZ $TMP_DOWNLOAD_PATH/$DBX_DATA_TAR_GZ
-$DROXUL download $DBX_BAK_ROOT_PATH/$DBX_IMG_TAR_GZ $TMP_DOWNLOAD_PATH/$DBX_IMG_TAR_GZ
-$DROXUL download $DBX_BAK_ROOT_PATH/$DBX_AF_TAR_GZ $TMP_DOWNLOAD_PATH/$DBX_AF_TAR_GZ
-$DROXUL download $DBX_BAK_ROOT_PATH/$DBX_FILES_TAR_GZ $TMP_DOWNLOAD_PATH/$DBX_FILES_TAR_GZ
+droxul download $DBX_BAK_ROOT_PATH/$DBX_DATA_TAR_GZ $TMP_DOWNLOAD_PATH/$DBX_DATA_TAR_GZ
+droxul download $DBX_BAK_ROOT_PATH/$DBX_IMG_TAR_GZ $TMP_DOWNLOAD_PATH/$DBX_IMG_TAR_GZ
+droxul download $DBX_BAK_ROOT_PATH/$DBX_AF_TAR_GZ $TMP_DOWNLOAD_PATH/$DBX_AF_TAR_GZ
+droxul download $DBX_BAK_ROOT_PATH/$DBX_FILES_TAR_GZ $TMP_DOWNLOAD_PATH/$DBX_FILES_TAR_GZ
 
 # DATA
 cd _xtract_tmp
