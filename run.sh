@@ -70,8 +70,8 @@ if [ -n "$VAGRANT_OSX_MODE" ];then
 else
     echo "Allowing Apache/PHP to write to the app"
     # Tweaks to give Apache/PHP write permissions to the app
-    chown -R www-data:staff /var/www
-    chown -R www-data:staff /app
+    chown -R www-data:staff /var/www &
+    chown -R www-data:staff /app *
 fi
 
 echo "Allowing Apache/PHP to write to MySQL"
