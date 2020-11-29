@@ -1,6 +1,10 @@
 #!/bin/bash
+#@STCGoal Runs and restart Mysql container if not working fine
+##@STCGoal See ../install.sh - Stuff for running the command bellow in the container
+### docker exec png-mysql "mysql -u ... -p ... db -query ' query etc...
 
 
+#var for connecting
 mysqlpassword='u!_Uy9laAE2ziUm2'
 mysqlusername='amiupandrunning'
 
