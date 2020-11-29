@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#@STCGoal Installing the fact that the state of the server will be stored and accessible
+## see scripts/amiupandrunning.sh
+
 
 export bemylib=/var/lib/bemy
 export bemystatusfile=$bemylib/status
