@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/bin/bash
 
 #@STCGoal A Script that stabilise the Platform
 #@STCIssue The backend crashes
