@@ -1,0 +1,7 @@
+# Crontab content
+*/15 * * * * /www/fichiers/_autoci.sh
+*/30 * * * * /www/_vh/gtdf/enligne/jpa/_jpa_download.sh
+*/45 * * * * /a/docker-compose-lamp/scripts/py-cron.sh
+0 4   *   *   *    /sbin/shutdown -r +5
+
+
